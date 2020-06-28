@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './components/index/index.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HomeComponent } from './components/home/home.component';
     FilmInfoComponent,
     IndexComponent,
     BusquedaComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
     
   ],
   imports: [

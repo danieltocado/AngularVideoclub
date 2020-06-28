@@ -1,12 +1,14 @@
 <app-header></app-header>
 <div class="container">
     <div class="pelicula"> 
-
-        <p>Titulo: {{peliculaMuestra.title}}</p>
-        <p>Overview: {{peliculaMuestra.overview}}</p>
-        <img width="200"height="288"
+        <div class="bloqueizquierda">
+            <img width="200"height="288"
             src="https://image.tmdb.org/t/p/w200/{{peliculaMuestra.poster_path}}" 
             alt="poster">
-    
+        </div>
+        <div class="bloquederecha">
+            <span class="titulopeli">{{peliculaMuestra.title}}</span>
+            <span class="sinopsispeli">{{peliculaMuestra.overview}}</span>  
+        </div>
     </div>
 </div>
