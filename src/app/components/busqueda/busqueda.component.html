@@ -1,21 +1,24 @@
 <app-header></app-header>
 
-<input type="text" name="" id="" placeholder="Título" (keyup)="buscaTitulo($event)">
+<div class="container">
 
-<div class="movies">
-    <div *ngFor="let pelicula of MovieService.peliculas">
+    <div class="movies">
 
-        <p>{{pelicula.title}}</p>
+        <h3>Insert a movie title.</h3>
 
-        <a routerLink="/info" routerLinkActive="active-link">
-        <img width="200"height="288" (click)="MovieService.locateMovie(pelicula)"
-            src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
-            alt="poster">
-        </a>
+        <input type="text" name="" id="" placeholder="Título" (keyup)="buscaTitulo($event)">
 
+        <div class = "pelicula" *ngFor="let pelicula of MovieService.peliculas">
+
+            <p>{{pelicula.title}}</p>
+            <br>
+            <a routerLink="/info" routerLinkActive="active-link">
+            <img width="200"height="288" (click)="MovieService.locateMovie(pelicula)"
+                src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
+                alt="poster">
+            </a>
+
+        </div>
     </div>
 </div>
 
-<a routerLink="/" routerLinkActive="active-link">
-    <button>Enter</button>    
-</a>
