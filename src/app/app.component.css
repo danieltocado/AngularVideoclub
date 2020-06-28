@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Bira;
+    src: url(/Videoclub/fonts/Bira_PERSONAL_USE_ONLY.ttf);
+}
+
+body {
+    background-color: #e7e7e7;
+}

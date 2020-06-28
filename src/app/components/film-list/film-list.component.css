@@ -1,0 +1,20 @@
+.movies {
+    /*display: grid;
+    grid-template-columns:  repeat(6,1fr);*/
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    
+    justify-content: center;
+    background-color: #e7e7e7;
+
+}
+
+.peliculas {
+    display: block;
+    margin-top: 20px;
+}
+
+body {
+    background-color: #e7e7e7;
+}

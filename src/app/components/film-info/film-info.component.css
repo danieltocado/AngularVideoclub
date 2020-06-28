@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background-color: #e7e7e7;
+
+
+}
+.pelicula {
+    background-color: gray;
+    height: 30em;
+    width: 60em;
+}

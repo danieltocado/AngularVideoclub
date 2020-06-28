@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Videoclub"
+    }
+  },
+  "defaultProject": "Videoclub",
+  "cli": {
+    "analytics": "d3a38e93-2ae8-4162-852b-2d7ea8f14314"
+  }
 }
