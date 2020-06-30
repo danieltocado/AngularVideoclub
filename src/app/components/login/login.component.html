@@ -1,8 +1,11 @@
-<app-header></app-header>
 
-<form class="loginForm" onsubmit="login(event)">
-    <input type="email" name="email" placeholder="Introduce el email">
-    <input type="password" name="password"
-    placeholder="Introduce el password">
-    <button type="submit">Log in</button>
+<form class="loginForm" #loginForm="ngForm" (submit)="login(loginForm)">
+    <div class="form-group">
+        <input type="email" email required class="form-control" id="exampleInputEmail1" name="email" ngModel placeholder="Introduce your email" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" ngModel class="form-control" required placeholder="Introduce your password" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <p class="registrate-or"><a href="">O regístrate si aún no lo has hecho.</a></p>
 </form>

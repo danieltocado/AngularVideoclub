@@ -24,8 +24,14 @@ export class MovieService {
   }
 
   locateMovie(peliculaEscoger:any):object {
+
     this.peliculaEscogida = peliculaEscoger;
     console.log(this.peliculaEscogida);
+
+    // localStorage PELICULA ESCOGIDA
+
+    localStorage.setItem("peliEscogida", JSON.stringify(this.peliculaEscogida));
+    
     return;
   }
 

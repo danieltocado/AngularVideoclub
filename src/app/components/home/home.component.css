@@ -39,5 +39,12 @@
     margin: 30px;
 }
 
+.container-fluid {
+    background-color: #e7e7e7;
+}
+
+:root {
+    background-color: #e7e7e7;
+}
 
 

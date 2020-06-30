@@ -14,9 +14,10 @@ export class FilmInfoComponent implements OnInit {
   constructor(public MovieService:MovieService) { }
 
   ngOnInit() {
-    this.peliculaMuestra = this.MovieService.peliculaEscogida;
-    console.log("Pelicula escogida",this.peliculaMuestra)
+    //this.peliculaMuestra = this.MovieService.peliculaEscogida;
+    //console.log("Pelicula escogida",this.peliculaMuestra)
     
+    this.peliculaMuestra = JSON.parse(localStorage.getItem("peliEscogida"))
   }
 
 }

@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:"info", component: FilmInfoComponent},
   {path:"search", component: BusquedaComponent},
   {path:"login", component: LoginComponent},
-  {path: "signup", component: SignupComponent}
+  {path:"signup", component: SignupComponent}
 
 ];
 
