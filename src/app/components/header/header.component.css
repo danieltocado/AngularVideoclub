@@ -1,3 +1,7 @@
+@import url(//db.onlinewebfonts.com/c/ddc0feed22c926a09622807e4b42c7ff?family=BiraW03-Regular);
+
+@font-face {font-family: "BiraW03-Regular"; src: url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.eot"); src: url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.woff") format("woff"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.svg#BiraW03-Regular") format("svg"); }
+
 .header {
     position: relative;
     min-height: 50px;
@@ -44,7 +48,8 @@ ul {
   }
 
 .logo-header {
-    font-family: bira, arial;
+  font-family: "BiraW03-Regular";
+ 
     
 }
 

@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent {
+  errorMsg: string;
+  constructor(public userService: UserService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  register(registerForm: NgForm): void {
+    console.log(registerForm);
+    if (!registerForm.valid) {
+      setTimeout(() => this.errorMsg = '', 2500);
+      this.errorMsg = 'Revisa tus campos';
+      return;
+    }
+    const user: User = registerForm.value;
+    this.userService.register(user)
+      .subscribe(console.log);
   }
-
 }

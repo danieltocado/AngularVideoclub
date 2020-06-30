@@ -1,8 +1,6 @@
+@import url(//db.onlinewebfonts.com/c/ddc0feed22c926a09622807e4b42c7ff?family=BiraW03-Regular);
 
-@font-face {
-    font-family: Bira;
-    src: url(/Videoclub/fonts/Bira_PERSONAL_USE_ONLY.ttf);
-}
+@font-face {font-family: "BiraW03-Regular"; src: url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.eot"); src: url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.woff") format("woff"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ddc0feed22c926a09622807e4b42c7ff.svg#BiraW03-Regular") format("svg"); }
 
 .portada {
     background-image: url(https://i.imgur.com/YhiUO3K.png);
@@ -24,7 +22,9 @@
 }
 
 .logo-index {
-    color: white;
+	color: white;
+	font-family: "BiraW03-Regular";
+	font-size: 150%;
 }
 
 .myButton {
