@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -29,16 +31,22 @@ import { ProfileComponent } from './components/profile/profile.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    NgbdModalContent,
+    NgbdModalComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
+  exports: [NgbdModalComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NgbdModalComponent],
+  entryComponents: [NgbdModalContent]
+
 })
 export class AppModule { }

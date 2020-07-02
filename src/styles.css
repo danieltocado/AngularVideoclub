@@ -4,3 +4,13 @@
     box-sizing: border-box;
 }
 
+#registrate-or {
+    font-size: 11px;
+    margin-top: 5px;
+    color: #1b0db4;
+    cursor: pointer;
+}
+
+#logo-index {
+    font-size: 50px;
+}

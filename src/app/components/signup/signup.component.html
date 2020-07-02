@@ -1,5 +1,4 @@
 
-<app-header></app-header>
 <div class="container">
 <form class="registerForm" #registerForm="ngForm" (submit)="register(registerForm)">
     <div class="alert alert-danger" *ngIf="errorMsg">{{errorMsg}}</div>
@@ -13,6 +12,5 @@
     <div class="form-group">
         <input type="password" name="password" ngModel class="form-control" required placeholder="Introduce your password" id="exampleInputPassword1">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
 </form></div>
-{{registerForm.value | json}}
