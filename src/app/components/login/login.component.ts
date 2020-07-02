@@ -16,7 +16,13 @@ export class LoginComponent {
     if(loginForm.valid) {
       const credentials: Credentials = loginForm.value;
       this.userService.login(credentials)
-      .subscribe(console.log, console.error);
+      .subscribe(res => {
+        localStorage.setItem('authToken', res.token);
+        localStorage.setItem('user', JSON.stringify(res.user));
+        this.userService.setUser(res.user);
+      }, error => {
+        console.log('error');
+      });
     }
   }
 

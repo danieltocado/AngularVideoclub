@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+import { Movie } from 'src/app/models/movie.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class MovieService {
   // backUrl = 'https://cors-anywhere.herokuapp.com/https://154.56.45.23/movies/';
-  backUrl = 'http://localhost:3000/movies/';
+  API_URL = environment.API_URL;
 
   peliculas: object[];
   peliculaEscogida: object[];
@@ -16,11 +18,19 @@ export class MovieService {
   constructor(private httpClient:HttpClient) { }
 
   getMovies():Observable<any> {
-    return this.httpClient.get(this.backUrl+'allmovies');
+    return this.httpClient.get(this.API_URL+'/movies/allmovies');
   }
 
   getMoviesTitle(title: string):Observable<any> {
-    return this.httpClient.get(this.backUrl + 'title/' + title);
+    return this.httpClient.get(this.API_URL + '/movies/title/' + title);
+  }
+
+  getPage(page: number):Observable<Movie[]> {
+    return this.httpClient.get<Movie[]>(this.API_URL + '/movies/page/' + page, {
+      headers: {
+        authorization: localStorage.getItem('authToken')
+      }
+    });
   }
 
   locateMovie(peliculaEscoger:any):object {
