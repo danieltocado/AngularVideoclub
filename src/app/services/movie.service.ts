@@ -12,10 +12,10 @@ export class MovieService {
   // backUrl = 'https://cors-anywhere.herokuapp.com/https://154.56.45.23/movies/';
   API_URL = environment.API_URL;
 
-  peliculas: object[];
+  public peliculas: Movie[] = [];
   peliculaEscogida: object[];
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(public httpClient:HttpClient) { }
 
   getMovies():Observable<any> {
     return this.httpClient.get(this.API_URL+'/movies/allmovies');
@@ -26,11 +26,7 @@ export class MovieService {
   }
 
   getPage(page: number):Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(this.API_URL + '/movies/page/' + page, {
-      headers: {
-        authorization: localStorage.getItem('authToken')
-      }
-    });
+    return this.httpClient.get<Movie[]>(this.API_URL + '/movies/page/' + page);
   }
 
   locateMovie(peliculaEscoger:any):object {
@@ -45,12 +41,12 @@ export class MovieService {
     return;
   }
 
-  setMovies(peliculas:object[]):void {
+  setMovies(peliculas:Movie[]):void {
    
     this.peliculas = peliculas;
   }
 
-  getMoviesB():object {
+  getMoviesB(): Movie[] {
     return this.peliculas;
   }
 }

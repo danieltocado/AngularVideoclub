@@ -1,13 +1,32 @@
 <div class="contenedor">
     <div class="overlay" id="overlay" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
         <div class="popup" id="popup" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
-            <p  id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup">x</p><!-- con un evento click le pasamos el parametro para cerrar el modal a la x -->
-            <h3>{{movie.title}}</h3><!-- pintamos el titulo de cada peli mediante el printado -->
-            <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt=""><!-- añadimos la imagen de la peli mediante el printado -->
-            <p>{{movie.overview}}</p><!-- añadimos la sinopsis de la peli mediante el printado -->
+          <!--  <p  id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup">x</p>
+            <h3>{{movie.title}}</h3>
+            <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
+            <p>{{movie.overview}}</p>
             <form action="">
                 <input type="submit" value="Alquilar">
-            </form>
-        </div>
+            </form>-->
+            <p  id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup">x</p>
+            <div class="card">
+                
+                <div class="row no-gutters">
+                    <div class="col-auto">
+                        <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="card-block px-2">
+                            <h4 class="card-title">{{movie.title}}</h4>
+                            <p class="card-text">{{movie.overview}}</p>
+                            <a href="#" class="btn btn-primary">RENT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer w-100 text-muted">
+                    Footer stating cats are CUTE little animals
+                </div>
+            </div>
+        </div> 
     </div>
 </div>

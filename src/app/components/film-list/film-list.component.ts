@@ -12,6 +12,8 @@ export class FilmListComponent implements OnInit {
   currentMovie: Movie;
   peliculasMostrar: object;
 
+  page = 1;
+
   constructor(public MovieService:MovieService) { }
 
   ngOnInit() {
@@ -22,11 +24,26 @@ export class FilmListComponent implements OnInit {
       () => console.log(this.peliculasMostrar)
     )
   }
+
   showMovieModalDetail(movie: Movie): void {
     this.showModal = true;
     this.currentMovie = movie;
   }  
   closeMovieModalDetail(): void {
     this.showModal = false;
+  }
+
+  getMovies(): Movie[] {
+    return this.MovieService.getMoviesB();
+  }
+  getByPage() {
+    this.MovieService.getPage(this.page)
+    .subscribe(movies => {
+      this.MovieService.setMovies(movies)
+    })
+  }
+  nextPage() {
+    this.page++;
+    this.getByPage();
   }
 }

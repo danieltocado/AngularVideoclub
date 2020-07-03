@@ -1,7 +1,14 @@
 <app-header></app-header>
 <app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
 
+<div class="pagination">
+    <button class="pageButton">Previous page</button> {{page}}
+    <button class="pageButton" (click)="nextPage()">Next page</button> 
+</div>
+
 <div class="movies">
+    
+
     <div class="peliculas" *ngFor="let pelicula of peliculasMostrar">
 
         <img width="200"height="288" (click)="showMovieModalDetail(pelicula)"
@@ -10,6 +17,13 @@
 
     </div>
 </div>
+
+<!-- esquema  -->
+<!-- 8 PELICULAS RANDOM  -->
+<!-- 8 PELICULAS TOP-RATED  -->
+<!-- 8 PELICULAS ???  -->
+
+
 
 
 
