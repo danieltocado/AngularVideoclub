@@ -23,6 +23,8 @@ export class SignupComponent {
     }
     const user: User = registerForm.value;
     this.userService.register(user)
-      .subscribe(console.log);
+      .subscribe(res => {
+        console.log;
+      });
   }
 }

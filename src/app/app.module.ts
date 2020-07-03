@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { MovieModalComponent } from './components/movie-modal/movie-modal.component'
 import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -33,7 +34,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SignupComponent,
     ProfileComponent,
     NgbdModalContent,
-    NgbdModalComponent
+    NgbdModalComponent,
+    MovieModalComponent
     
   ],
   imports: [

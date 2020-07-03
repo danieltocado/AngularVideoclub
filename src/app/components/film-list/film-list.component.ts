@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
+import { Movie } from 'src/app/models/movie.model';
 
 @Component({
   selector: 'app-film-list',
@@ -7,7 +8,8 @@ import { MovieService } from '../../services/movie.service';
   styleUrls: ['./film-list.component.css']
 })
 export class FilmListComponent implements OnInit {
-
+  showModal: boolean;
+  currentMovie: Movie;
   peliculasMostrar: object;
 
   constructor(public MovieService:MovieService) { }
@@ -20,5 +22,11 @@ export class FilmListComponent implements OnInit {
       () => console.log(this.peliculasMostrar)
     )
   }
-
+  showMovieModalDetail(movie: Movie): void {
+    this.showModal = true;
+    this.currentMovie = movie;
+  }  
+  closeMovieModalDetail(): void {
+    this.showModal = false;
+  }
 }
