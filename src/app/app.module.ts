@@ -45,7 +45,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   exports: [NgbdModalComponent],
   providers: [],
-  bootstrap: [AppComponent, NgbdModalComponent],
+  bootstrap: [AppComponent],
   entryComponents: [NgbdModalContent]
 
 })
