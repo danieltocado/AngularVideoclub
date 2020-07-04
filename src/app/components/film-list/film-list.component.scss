@@ -1,0 +1,48 @@
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e7e7e7;
+}
+
+.movies img{
+    border: 2px solid #578a26;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+  
+ .peliculas li {
+    float: left;
+    width: 100px;
+    height: 150px;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    margin-top: 50px;
+    list-style: none;
+    
+  }
+  
+  
+ .peliculas ul:hover li {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  .peliculas ul:hover li:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    transition-duration: 0.1818181818s;
+  }
+  .peliculas ul:hover li:hover ~ li {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+
+
+

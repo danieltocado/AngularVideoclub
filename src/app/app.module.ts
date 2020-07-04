@@ -18,6 +18,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MovieModalComponent } from './components/movie-modal/movie-modal.component'
 import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RentComponent } from './components/rent/rent.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProfileComponent,
     NgbdModalContent,
     NgbdModalComponent,
-    MovieModalComponent
+    MovieModalComponent,
+    RentComponent
     
   ],
   imports: [
