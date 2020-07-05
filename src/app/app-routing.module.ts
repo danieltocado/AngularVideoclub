@@ -13,15 +13,15 @@ import { LastmoviesComponent } from './components/lastmovies/lastmovies.componen
 
 const routes: Routes = [
   {path:"", component: IndexComponent},
-  {path:"home", component: HomeComponent},
-  {path:"display", component: FilmListComponent},
+  {path:"home", component: FilmListComponent},
   {path:"info", component: FilmInfoComponent},
   {path:"search", component: BusquedaComponent},
   {path:"login", component: LoginComponent},
   {path:"signup", component: SignupComponent},
   {path: "rent", component: RentComponent},
   {path: "popular", component: PopularmoviesComponent},
-  {path: "lastmovies", component: LastmoviesComponent}
+  {path: "lastmovies", component: LastmoviesComponent},
+  {path: "list", component: HomeComponent}
 
 ];
 

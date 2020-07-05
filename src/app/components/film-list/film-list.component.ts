@@ -21,8 +21,9 @@ export class FilmListComponent implements OnInit {
     .subscribe(
       res => this.peliculasMostrar = res,
       error => console.error(error),
-      () => console.log(this.peliculasMostrar)
+      () => console.log(this.peliculasMostrar),
     )
+    
   }
 
   showMovieModalDetail(movie: Movie): void {
@@ -36,14 +37,6 @@ export class FilmListComponent implements OnInit {
   getMovies(): Movie[] {
     return this.MovieService.getMoviesB();
   }
-  getByPage() {
-    this.MovieService.getPage(this.page)
-    .subscribe(movies => {
-      this.MovieService.setMovies(movies)
-    })
-  }
-  nextPage() {
-    this.page++;
-    this.getByPage();
-  }
+  
+  
 }

@@ -1,24 +1,29 @@
 <app-header></app-header>
 <app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
 
-<div class="pagination">
-    <div class="page-item"><a class="page-link" (click)="nextPage()">Previous page</a></div>
-    <div class="page-item page-link"> {{page}}</div>
-    <div class="page-item"><a class="page-link"(click)="nextPage()">Next page</a></div> 
-</div>
 
-<div class="movies">
-    <div class="peliculas" *ngFor="let pelicula of peliculasMostrar">
-        <ul>
-            <li> <img width="110"height="188" (click)="showMovieModalDetail(pelicula)"
-                src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
-                alt="poster">
-            </li>
-        </ul>
+
+<div class="container-fluid random-movies">
+    <h1>Random movies</h1>
+    <div class="movies">
+        <div class="peliculas" *ngFor="let pelicula of peliculasMostrar">
+            <ul>
+                <li> <img width="110"height="188" (click)="showMovieModalDetail(pelicula)"
+                    src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
+                    alt="poster">
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<app-lastmovies></app-lastmovies>
+<div class="last-movies">
+    <app-lastmovies></app-lastmovies>
+</div>
+
+<div class="popular-movies">
+    <app-popularmovies></app-popularmovies>
+</div>
 <!-- esquema  -->
 <!-- 8 PELICULAS RANDOM  -->
 <!-- 8 PELICULAS TOP-RATED  -->

@@ -1,1 +1,15 @@
-<p>popularmovies works!</p>
+<app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
+
+<div class="popular-movies">
+    <h1>Popular movies</h1>
+    <div class="movies">
+        <div class="peliculas" *ngFor="let pelicula of peliculasMostrar">
+            <ul>
+                <li> <img width="110"height="188" (click)="showMovieModalDetail(pelicula)"
+                    src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
+                    alt="poster">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

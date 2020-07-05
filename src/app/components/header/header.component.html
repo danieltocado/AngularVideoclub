@@ -6,7 +6,7 @@
             <li><a routerLink="/display" routerLinkActive="active-link">List</a></li>
             <li><a routerLink="/search" routerLinkActive="active-link">Search</a></li>
         </ul>
-        <ul>
+        <!--<ul>
             <div class="buscador">
                 <input type="text" name="" id="" placeholder="hola" (keyup)="buscaTitulo($event)">
                 <div class = "pelicula" *ngFor="let pelicula of MovieService.peliculas">
@@ -16,7 +16,7 @@
         
                 </div>
             </div>
-        </ul>
+        </ul>-->
         <ul>
             <div class="guestZone" *ngIf="!getUser()">
                 <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment'
-
+import { Router } from '@angular/router'
 import { User } from '../models/user.model';
 import { Login } from '../interfaces/login';
 import { Credentials } from '../interfaces/credentials'
@@ -42,5 +42,6 @@ export class UserService {
     this.setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('authToken');
+
   }
 }
