@@ -21,6 +21,13 @@ export class MovieService {
     return this.httpClient.get(this.API_URL+'/movies/allmovies');
   }
 
+  getPopularMovies():Observable<any> {
+    return this.httpClient.get(this.API_URL + '/movies/popular');
+  }
+  getLastFilms():Observable<any> {
+    return this.httpClient.get(this.API_URL + '/movies/lastmovies');
+  }
+
   getMoviesTitle(title: string):Observable<any> {
     return this.httpClient.get(this.API_URL + '/movies/title/' + title);
   }
@@ -49,4 +56,6 @@ export class MovieService {
   getMoviesB(): Movie[] {
     return this.peliculas;
   }
+
+  
 }

@@ -1,10 +1,21 @@
 <div class="header">
-    <nav>
+    <nav  >
         <ul>
             <li><a href=""><span class="logo-header"><p>Videoclub</p></span></a></li>
             <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
             <li><a routerLink="/display" routerLinkActive="active-link">List</a></li>
             <li><a routerLink="/search" routerLinkActive="active-link">Search</a></li>
+        </ul>
+        <ul>
+            <div class="buscador">
+                <input type="text" name="" id="" placeholder="hola" (keyup)="buscaTitulo($event)">
+                <div class = "pelicula" *ngFor="let pelicula of MovieService.peliculas">
+
+                    <div><p><a href="/info">{{pelicula.title}}</a></p></div>
+                    
+        
+                </div>
+            </div>
         </ul>
         <ul>
             <div class="guestZone" *ngIf="!getUser()">
@@ -13,7 +24,9 @@
             </div>
             <div class="userZone" *ngIf="getUser() as user">
                 <li><a routerLink="/profile" routerLinkActive="active-link">{{user.name || user.email}}</a></li>
-                <li><a (click)="logout()" routerLinkActive="active-link">Logout</a></li>
+                <li><a (click)="logout()" routerLinkActive="active-link">
+                    <span class="btn btn-danger navbar-btn marginbot">Logout</span>
+                </a></li>
             </div>
         </ul>
     </nav>

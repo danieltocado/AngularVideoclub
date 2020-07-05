@@ -8,16 +8,17 @@
 </div>
 
 <div class="movies">
-    
     <div class="peliculas" *ngFor="let pelicula of peliculasMostrar">
-<ul>
-       <li> <img width="110"height="188" (click)="showMovieModalDetail(pelicula)"
-            src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
-            alt="poster"></li></ul>
-
+        <ul>
+            <li> <img width="110"height="188" (click)="showMovieModalDetail(pelicula)"
+                src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
+                alt="poster">
+            </li>
+        </ul>
     </div>
 </div>
 
+<app-lastmovies></app-lastmovies>
 <!-- esquema  -->
 <!-- 8 PELICULAS RANDOM  -->
 <!-- 8 PELICULAS TOP-RATED  -->

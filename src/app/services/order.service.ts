@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';//importación por defecto de angular
 import { HttpClient } from '@angular/common/http';//importación por defecto de angular
-import { Observable, from } from 'rxjs';//importación por defecto de angular
+import { Observable } from 'rxjs';//importación por defecto de angular
 import { environment } from '../../environments/environment';
 import { Order } from '../models/order.model';
 @Injectable({

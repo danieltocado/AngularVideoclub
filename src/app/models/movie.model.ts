@@ -3,7 +3,8 @@ export interface Movie {
     title: String,
     overview: Text,
     poster_path: String,
-    popularity: Float32Array
+    popularity: Float32Array,
+    release_date: Date
 
 
 }

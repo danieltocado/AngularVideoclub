@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RentComponent } from './components/rent/rent.component';
+import { PopularmoviesComponent } from './components/popularmovies/popularmovies.component';
+import { LastmoviesComponent } from './components/lastmovies/lastmovies.component';
 
 const routes: Routes = [
   {path:"", component: IndexComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path:"search", component: BusquedaComponent},
   {path:"login", component: LoginComponent},
   {path:"signup", component: SignupComponent},
-  {path: "rent", component: RentComponent}
+  {path: "rent", component: RentComponent},
+  {path: "popular", component: PopularmoviesComponent},
+  {path: "lastmovies", component: LastmoviesComponent}
 
 ];
 

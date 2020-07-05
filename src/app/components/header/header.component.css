@@ -11,6 +11,15 @@
     background-color: #578a26;
 }
 
+.buscador {
+  width: 250px;
+  height: 500px;
+}
+
+.buscador input {
+  width: 250px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -40,8 +49,14 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 1s ease all;
   }
   
+  .userZone a {
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #10a65c;
@@ -53,3 +68,6 @@ ul {
     
 }
 
+.pelicula p {
+  background-color: white;
+}
