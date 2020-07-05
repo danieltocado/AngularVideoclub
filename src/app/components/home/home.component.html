@@ -1,13 +1,15 @@
 <app-header></app-header>
+<app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
 
-<div class="pagination">
-    <div class="page-item"><a class="page-link"(click)="backPage()" >Previous page</a></div>
-    <div class="page-item page-link"> {{page}}</div>
-    <div class="page-item"><a class="page-link"(click)="nextPage()">Next page</a></div> 
-</div>
+
 
 <div class="list-movies">
     <h1>All movies</h1>
+    <div class="pagination">
+        <div class="page-item"><a class="page-link"(click)="backPage()" >Previous page</a></div>
+        <div class="page-item page-link"> {{page}}</div>
+        <div class="page-item"><a class="page-link"(click)="nextPage()">Next page</a></div> 
+    </div>
     <div class="movies">
         
 

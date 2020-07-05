@@ -15,6 +15,18 @@
     padding-bottom: 6em;
     padding-right: 10px;
 }
+.list-movies {
+ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.page-item {
+    cursor: pointer;
+}
 
 .peliculas li {
     float: left;
